@@ -1,0 +1,18 @@
+[common]
+#vps的ip地址
+server_addr = 
+#这个是主端口号，需要和服务端配置文件中的bind_port一致
+server_port = 7000
+[dsfile]
+#协议类型
+type = tcp
+#把流量转发到哪个ip
+local_ip = 10.0.0.10
+#把流量转发到哪个端口
+local_port = 5500
+#vps上哪个端口的流量转发到local_ip:local_port
+remote_port = 5500
+#启用压缩
+use_compression = true
+#启用加密
+use_encryption = true
