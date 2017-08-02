@@ -3,9 +3,10 @@
 
 exe=/volume1/homes/USER/frp/frpc
 cfg=/volume1/homes/USER/frp/frpc.ini
+log=/volume1/homes/USER/frp/log
 
 start(){
-        nohup $exe -c $cfg >/dev/null 2>&1 &
+        nohup $exe -c $cfg -L $log >/dev/null 2>&1 &
 }
 
 stop(){
